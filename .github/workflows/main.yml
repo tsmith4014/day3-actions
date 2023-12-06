@@ -5,7 +5,7 @@ on:
     branches:
       -master
   schedule:
-     - cron: "0 17,5 * * *" # Runs every day at noon and midnight EST
+     - cron: "0 17,5 * * *" # Runs every day at noon and midnight ESTtt
 
 jobs:
   workflow:
