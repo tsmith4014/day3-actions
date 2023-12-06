@@ -1,4 +1,4 @@
-## Assignment:
+## Assignment day 3:
 
 Create a GitHub Actions workflow that will trigger on every push to the **`main`** branch of your repository. The workflow should do the following:
 
