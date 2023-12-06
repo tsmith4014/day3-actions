@@ -1,0 +1,30 @@
+name: Auto Git Push
+
+on:
+  push:
+    branches:
+      -master
+  schedule:
+    - cron: '00***' # Every day at midnight
+    - cron: '00**5' # Every Friday at midnight
+
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: create msg.txt
+        run: echo "This is a msg"  > msg.tst
+
+      - name: Print working dir
+        run: pwd
+
+
+      - name: Print msg
+        run: cat msg.txt
+
+      - name: echo msg
+        run: echo "this is a custom msg"
+    
