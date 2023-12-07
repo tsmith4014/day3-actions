@@ -3,7 +3,7 @@ name: Auto Git Push Action
 on:
   push:
     branches:
-      -master
+      - master
   schedule:
     - cron: '0 17 * * *'  # Runs every day at 17:00
     - cron: '0 5 * * *'   # Runs every day at 05:00
