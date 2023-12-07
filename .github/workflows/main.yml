@@ -1,11 +1,12 @@
-name: Auto Git Push
+name: Auto Git Push Action
 
 on:
   push:
     branches:
-      -master
+      - master
   schedule:
-     - cron: "0 17,5 * * *" # Runs every day at noon and midnight ESTtt
+    - cron: '0 17 * * *'  # Runs every day at 17:00
+    - cron: '0 5 * * *'   # Runs every day at 05:00
 
 jobs:
   workflow:
@@ -15,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: create msg.txt
-        run: echo "This is a msg"  > msg.tst
+        run: echo "This is a msg"  > msg.txt
 
       - name: Print working dir
         run: pwd
