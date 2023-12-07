@@ -1,4 +1,4 @@
-name: Auto Git Push
+name: Auto Git Push Action
 
 on:
   push:
